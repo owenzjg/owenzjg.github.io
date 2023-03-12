@@ -1,0 +1,613 @@
+<html>
+<head>
+    <!--
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<!--这个是基本代码-->
+<style>
+    .pace .pace-progress {
+    	background: #1E92FB; /*进度条颜色*/
+    	height: 3px;
+    }
+    .pace .pace-progress-inner {
+     	box-shadow: 0 0 10px #1E92FB, 0 0 5px #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+    	border-top-color: #1E92FB;	/*上边框颜色*/
+    	border-left-color: #1E92FB;	/*左边框颜色*/
+    }
+  </style>
+<!--这个是更改颜色的-->
+<!--上面这段代码是为了顶部加载条准备的-->
+<meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Owenzjg&#39;s blog</title>
+
+<link rel="shortcut icon" href="https://owenzjg.netlify.app/favicon.ico?v=1678601024968">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://owenzjg.netlify.app/styles/main.css">
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css"> -->
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/9.12.0/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/9.12.0/languages//dart.min.js"></script>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script> -->
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <div class="main-content">
+        <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="/">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            Owenzjg&#39;s blog
+        </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="changeNavbar">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+            <div class="nav-item">
+                
+                <a href="/" class="menu gt-a-link">
+                    首页
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/tag/rHfLoJkSS/" class="menu gt-a-link">
+                    专题
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/archives" class="menu gt-a-link">
+                    归档
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/tags" class="menu gt-a-link">
+                    标签
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/post/about" class="menu gt-a-link">
+                    关于
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/friends" class="menu gt-a-link">
+                    友链
+                </a>
+                
+            </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1678601024968"
+                action="/search/">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+<script>
+    /* 移动端导航栏展开/收起切换 */
+    document.getElementById('changeNavbar').onclick = () => {
+        var element = document.getElementById('navbarSupportedContent');
+        if (element.style.display === 'none' || element.style.display === '') {
+            element.style.display = 'block';
+        } else {
+            element.style.display = 'none';
+        }
+    }
+</script>
+<script>
+/* 百度统计 */
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?d1b0e8fbeee11aa2f032dccdf777a613";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+        <div class="post-list-container">
+    <div class="post-inner">
+        
+            <div class="post gt-bg-theme-color-second">
+                
+                <div class="post-left">
+                    <div>
+                        
+                        <a href="https://owenzjg.netlify.app/post/cp1880-noi1995-shi-zi-he-bing-ti-jie/">
+                            <span class="post-title gt-c-content-color-first">[c++]P1880 [NOI1995] 石子合并 题解</span>
+                        </a>
+                    </div>
+                    <div class="gt-post-content post-abstract gt-c-content-color-second">
+                        
+                    </div>
+                    <div class="post-info">
+                        <time class="post-time gt-c-content-color-first">
+                            发布于 · 2023-02-19 ·
+                        </time>
+                        
+                            <a href="https://owenzjg.netlify.app/tag/JUaDEFBel/" class="post-tag">
+                                # luogu
+                            </a>
+                            ·
+                        
+                            <a href="https://owenzjg.netlify.app/tag/4CQi8I8dO/" class="post-tag">
+                                # c++
+                            </a>
+                            ·
+                        
+
+                        
+                        <time class="post-time gt-c-content-color-first">
+                            3 min read
+                        </time>
+                        <!--阅读时长-->
+                    </div>
+                </div>
+                
+            </div>
+        
+            <div class="post gt-bg-theme-color-second">
+                
+                <div class="post-left">
+                    <div>
+                        
+                        <a href="https://owenzjg.netlify.app/post/c-p1063-noip2006-ti-gao-zu-neng-liang-xiang-lian-ti-jie/">
+                            <span class="post-title gt-c-content-color-first">[c++] P1063 [NOIP2006 提高组] 能量项链 题解</span>
+                        </a>
+                    </div>
+                    <div class="gt-post-content post-abstract gt-c-content-color-second">
+                        
+                    </div>
+                    <div class="post-info">
+                        <time class="post-time gt-c-content-color-first">
+                            发布于 · 2023-02-18 ·
+                        </time>
+                        
+                            <a href="https://owenzjg.netlify.app/tag/JUaDEFBel/" class="post-tag">
+                                # luogu
+                            </a>
+                            ·
+                        
+                            <a href="https://owenzjg.netlify.app/tag/4CQi8I8dO/" class="post-tag">
+                                # c++
+                            </a>
+                            ·
+                        
+
+                        
+                        <time class="post-time gt-c-content-color-first">
+                            2 min read
+                        </time>
+                        <!--阅读时长-->
+                    </div>
+                </div>
+                
+            </div>
+        
+            <div class="post gt-bg-theme-color-second">
+                
+                <div class="post-left">
+                    <div>
+                        
+                        <a href="https://owenzjg.netlify.app/post/gong-ju-suo-you-xi-tong-github-mian-fei-jia-su/">
+                            <span class="post-title gt-c-content-color-first">[工具]所有系统GitHub免费加速-steam++</span>
+                        </a>
+                    </div>
+                    <div class="gt-post-content post-abstract gt-c-content-color-second">
+                        
+                    </div>
+                    <div class="post-info">
+                        <time class="post-time gt-c-content-color-first">
+                            发布于 · 2023-02-18 ·
+                        </time>
+                        
+                            <a href="https://owenzjg.netlify.app/tag/5Zrubo8zA/" class="post-tag">
+                                # 工具
+                            </a>
+                            ·
+                        
+
+                        
+                        <time class="post-time gt-c-content-color-first">
+                            2 min read
+                        </time>
+                        <!--阅读时长-->
+                    </div>
+                </div>
+                
+            </div>
+        
+            <div class="post gt-bg-theme-color-second">
+                
+                <div class="post-left">
+                    <div>
+                        
+                        <a href="https://owenzjg.netlify.app/post/c-p1629-you-di-yuan-song-xin/">
+                            <span class="post-title gt-c-content-color-first">[c++] P1629 邮递员送信 题解</span>
+                        </a>
+                    </div>
+                    <div class="gt-post-content post-abstract gt-c-content-color-second">
+                        
+                    </div>
+                    <div class="post-info">
+                        <time class="post-time gt-c-content-color-first">
+                            发布于 · 2023-02-10 ·
+                        </time>
+                        
+                            <a href="https://owenzjg.netlify.app/tag/JUaDEFBel/" class="post-tag">
+                                # luogu
+                            </a>
+                            ·
+                        
+                            <a href="https://owenzjg.netlify.app/tag/4CQi8I8dO/" class="post-tag">
+                                # c++
+                            </a>
+                            ·
+                        
+
+                        
+                        <time class="post-time gt-c-content-color-first">
+                            3 min read
+                        </time>
+                        <!--阅读时长-->
+                    </div>
+                </div>
+                
+            </div>
+        
+            <div class="post gt-bg-theme-color-second">
+                
+                <div class="post-left">
+                    <div>
+                        
+                        <a href="https://owenzjg.netlify.app/post/cdijkstra-mo-ban/">
+                            <span class="post-title gt-c-content-color-first">[c++]dijkstra模版</span>
+                        </a>
+                    </div>
+                    <div class="gt-post-content post-abstract gt-c-content-color-second">
+                        
+                    </div>
+                    <div class="post-info">
+                        <time class="post-time gt-c-content-color-first">
+                            发布于 · 2023-02-09 ·
+                        </time>
+                        
+                            <a href="https://owenzjg.netlify.app/tag/4CQi8I8dO/" class="post-tag">
+                                # c++
+                            </a>
+                            ·
+                        
+
+                        
+                        <time class="post-time gt-c-content-color-first">
+                            2 min read
+                        </time>
+                        <!--阅读时长-->
+                    </div>
+                </div>
+                
+            </div>
+        
+            <div class="post gt-bg-theme-color-second">
+                
+                <div class="post-left">
+                    <div>
+                        
+                        <a href="https://owenzjg.netlify.app/post/cer-cha-shu-bian-li-mo-ban-qian-zhong-hou-bian-li/">
+                            <span class="post-title gt-c-content-color-first">[c++]二叉树便利模板（前中后便利）</span>
+                        </a>
+                    </div>
+                    <div class="gt-post-content post-abstract gt-c-content-color-second">
+                        
+                    </div>
+                    <div class="post-info">
+                        <time class="post-time gt-c-content-color-first">
+                            发布于 · 2023-02-09 ·
+                        </time>
+                        
+                            <a href="https://owenzjg.netlify.app/tag/4CQi8I8dO/" class="post-tag">
+                                # c++
+                            </a>
+                            ·
+                        
+
+                        
+                        <time class="post-time gt-c-content-color-first">
+                            3 min read
+                        </time>
+                        <!--阅读时长-->
+                    </div>
+                </div>
+                
+            </div>
+        
+            <div class="post gt-bg-theme-color-second">
+                
+                <div class="post-left">
+                    <div>
+                        
+                        <a href="https://owenzjg.netlify.app/post/si-xue-zhong-guo-gu-dai-tong-yi-de-duo-min-zu-guo-jia-de-yan-jin-ji-yi-yi/">
+                            <span class="post-title gt-c-content-color-first">[思学]中国古代统一的多民族国家的演进及意义</span>
+                        </a>
+                    </div>
+                    <div class="gt-post-content post-abstract gt-c-content-color-second">
+                        
+                    </div>
+                    <div class="post-info">
+                        <time class="post-time gt-c-content-color-first">
+                            发布于 · 2023-02-04 ·
+                        </time>
+                        
+                            <a href="https://owenzjg.netlify.app/tag/heTeArQiH/" class="post-tag">
+                                # 思学
+                            </a>
+                            ·
+                        
+
+                        
+                        <time class="post-time gt-c-content-color-first">
+                            7 min read
+                        </time>
+                        <!--阅读时长-->
+                    </div>
+                </div>
+                
+            </div>
+        
+            <div class="post gt-bg-theme-color-second">
+                
+                <div class="post-left">
+                    <div>
+                        
+                        <a href="https://owenzjg.netlify.app/post/si-xue-liu-bang-he-xiang-yu-shui-geng-sheng-yi-chou/">
+                            <span class="post-title gt-c-content-color-first">[思学]刘邦和项羽，谁更胜一筹</span>
+                        </a>
+                    </div>
+                    <div class="gt-post-content post-abstract gt-c-content-color-second">
+                        
+                    </div>
+                    <div class="post-info">
+                        <time class="post-time gt-c-content-color-first">
+                            发布于 · 2023-02-03 ·
+                        </time>
+                        
+                            <a href="https://owenzjg.netlify.app/tag/heTeArQiH/" class="post-tag">
+                                # 思学
+                            </a>
+                            ·
+                        
+
+                        
+                        <time class="post-time gt-c-content-color-first">
+                            7 min read
+                        </time>
+                        <!--阅读时长-->
+                    </div>
+                </div>
+                
+                    <a href="https://owenzjg.netlify.app/post/si-xue-liu-bang-he-xiang-yu-shui-geng-sheng-yi-chou/" class="post-feature-image"
+                       style="background-image: url('https://owenzjg.netlify.app/post-images/si-xue-liu-bang-he-xiang-yu-shui-geng-sheng-yi-chou.png')">
+                    </a>
+                
+            </div>
+        
+            <div class="post gt-bg-theme-color-second">
+                
+                <div class="post-left">
+                    <div>
+                        
+                        <a href="https://owenzjg.netlify.app/post/si-xue-lesslesszhong-guo-tong-shi-greatergreater-guan-hou-gan/">
+                            <span class="post-title gt-c-content-color-first">[思学]《中国通史》到中国文化</span>
+                        </a>
+                    </div>
+                    <div class="gt-post-content post-abstract gt-c-content-color-second">
+                        
+                    </div>
+                    <div class="post-info">
+                        <time class="post-time gt-c-content-color-first">
+                            发布于 · 2023-02-02 ·
+                        </time>
+                        
+                            <a href="https://owenzjg.netlify.app/tag/heTeArQiH/" class="post-tag">
+                                # 思学
+                            </a>
+                            ·
+                        
+
+                        
+                        <time class="post-time gt-c-content-color-first">
+                            3 min read
+                        </time>
+                        <!--阅读时长-->
+                    </div>
+                </div>
+                
+            </div>
+        
+            <div class="post gt-bg-theme-color-second">
+                
+                <div class="post-left">
+                    <div>
+                        
+                        <a href="https://owenzjg.netlify.app/post/si-xue-lesslessluo-tuo-xiang-zi-greatergreater-jie-du-2/">
+                            <span class="post-title gt-c-content-color-first">[思学]《骆驼祥子》解读2</span>
+                        </a>
+                    </div>
+                    <div class="gt-post-content post-abstract gt-c-content-color-second">
+                        
+                    </div>
+                    <div class="post-info">
+                        <time class="post-time gt-c-content-color-first">
+                            发布于 · 2023-02-01 ·
+                        </time>
+                        
+                            <a href="https://owenzjg.netlify.app/tag/heTeArQiH/" class="post-tag">
+                                # 思学
+                            </a>
+                            ·
+                        
+
+                        
+                        <time class="post-time gt-c-content-color-first">
+                            4 min read
+                        </time>
+                        <!--阅读时长-->
+                    </div>
+                </div>
+                
+                    <a href="https://owenzjg.netlify.app/post/si-xue-lesslessluo-tuo-xiang-zi-greatergreater-jie-du-2/" class="post-feature-image"
+                       style="background-image: url('https://owenzjg.netlify.app/post-images/si-xue-lesslessluo-tuo-xiang-zi-greatergreater-jie-du-2.png')">
+                    </a>
+                
+            </div>
+        
+    </div>
+</div>
+
+        <div class="pagination-container">
+    
+        <a href="https://owenzjg.netlify.app/" class="prev-page gt-a-link">上一页</a>
+    
+    
+        <a href="https://owenzjg.netlify.app/page/3/" class="prev-page gt-a-link">下一页</a>
+    
+</div>
+
+
+        <script>
+    function secondToDate(second) {
+        if (!second) {
+            return 0;
+        }
+        var time = new Array(0, 0, 0, 0, 0);
+        if (second >= 365 * 24 * 3600) {
+            time[0] = parseInt(second / (365 * 24 * 3600));
+            second %= 365 * 24 * 3600;
+        }
+        if (second >= 24 * 3600) {
+            time[1] = parseInt(second / (24 * 3600));
+            second %= 24 * 3600;
+        }
+        if (second >= 3600) {
+            time[2] = parseInt(second / 3600);
+            second %= 3600;
+        }
+        if (second >= 60) {
+            time[3] = parseInt(second / 60);
+            second %= 60;
+        }
+        if (second > 0) {
+            time[4] = second;
+        }
+        return time;
+    }</script><script type="text/javascript" language="javascript">
+    function setTime() {
+        var create_time = Math.round(new Date(Date.UTC(2023, 00, 09, 10, 32, 0)).getTime() / 1000);
+        var timestamp = Math.round((new Date().getTime() + 8 * 60 * 60 * 1000) / 1000);
+        currentTime = secondToDate((timestamp - create_time));
+        currentTimeHtml = currentTime[0] + '年' + currentTime[1] + '天'
+                + currentTime[2] + '时' + currentTime[3] + '分' + currentTime[4]
+                + '秒';
+        document.getElementById("htmer_time").innerHTML = currentTimeHtml;
+    }    setInterval(setTime, 1000);</script>
+    
+    
+<div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">Always continue; Never break;
+</div>
+    <div class="social-container">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+        </script>
+        <span id="busuanzi_container_site_pv">
+            本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        </span>
+        <br>
+        <span id="busuanzi_container_site_uv">
+            本站访客数为<span id="busuanzi_value_site_uv"></span>人次
+          </span>
+        <br>
+        
+        <!--
+        网站总访问量：<img src='https://www.free-website-hit-counter.com/c.php?d=9&id=143596&s=1'></a>
+        -->
+       网站稳定运行：<span id="htmer_time" style="color: black;"></span>
+         <!--Theme <a href="https://github.com/imhanjie/gridea-theme-pure" target="_blank">Pure</a>,--> 
+        <br>
+        <a href="https://icp.gov.moe/?keyword=20237890" target="_blank">萌ICP备20237890号</a>
+        <br>
+        Powered by <ahref="https://owenzjg.netlify.app/" target="_blank">Owenzjg</a> | 
+        <a href="https://owenzjg.netlify.app/atom.xml" target="_blank">RSS</a> 
+        <!--  <a href="https://www.luogu.com.cn/user/515971">luogu </a>
+&#160and&#160
+<a href="https://space.bilibili.com/2141375851/"> bilibili</a>.
+<br>
+网站总访问量：<img src='https://www.free-website-hit-counter.com/c.php?d=9&id=143596&s=1' border='0' ></a>
+<br>
+网站状态: <img src='https://api.netlify.com/api/v1/badges/33964a3e-8918-45d9-89a4-a5d74cee8f6c/deploy-status' ></a>
+<br>
+<a href="https://icp.gov.moe/?keyword=20237890" target="_blank">萌ICP备20237890号</a> -->
+    </div>
+</div>
+
+<script>
+  hljs.highlightAll()
+</script>
+
+    </div>
+</div>
+</body>
+</html>

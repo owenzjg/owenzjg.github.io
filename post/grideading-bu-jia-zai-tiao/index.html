@@ -1,0 +1,380 @@
+<html>
+<head>
+    <!--
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<!--这个是基本代码-->
+<style>
+    .pace .pace-progress {
+    	background: #1E92FB; /*进度条颜色*/
+    	height: 3px;
+    }
+    .pace .pace-progress-inner {
+     	box-shadow: 0 0 10px #1E92FB, 0 0 5px #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+    	border-top-color: #1E92FB;	/*上边框颜色*/
+    	border-left-color: #1E92FB;	/*左边框颜色*/
+    }
+  </style>
+<!--这个是更改颜色的-->
+<!--上面这段代码是为了顶部加载条准备的-->
+<meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>[Gridea]顶部加载条 | Owenzjg&#39;s blog</title>
+
+<link rel="shortcut icon" href="https://owenzjg.netlify.app/favicon.ico?v=1678601024968">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://owenzjg.netlify.app/styles/main.css">
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css"> -->
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/9.12.0/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/9.12.0/languages//dart.min.js"></script>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script> -->
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+    
+</head>
+<body>
+
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="/">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            Owenzjg&#39;s blog
+        </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="changeNavbar">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+            <div class="nav-item">
+                
+                <a href="/" class="menu gt-a-link">
+                    首页
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/tag/rHfLoJkSS/" class="menu gt-a-link">
+                    专题
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/archives" class="menu gt-a-link">
+                    归档
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/tags" class="menu gt-a-link">
+                    标签
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/post/about" class="menu gt-a-link">
+                    关于
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/friends" class="menu gt-a-link">
+                    友链
+                </a>
+                
+            </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1678601024968"
+                action="/search/">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+<script>
+    /* 移动端导航栏展开/收起切换 */
+    document.getElementById('changeNavbar').onclick = () => {
+        var element = document.getElementById('navbarSupportedContent');
+        if (element.style.display === 'none' || element.style.display === '') {
+            element.style.display = 'block';
+        } else {
+            element.style.display = 'none';
+        }
+    }
+</script>
+<script>
+/* 百度统计 */
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?d1b0e8fbeee11aa2f032dccdf777a613";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+			
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    [Gridea]顶部加载条
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2023-01-24 ·
+                    </time>
+                    
+                        <a href="https://owenzjg.netlify.app/tag/zrffiK6Qj/" class="post-tags">
+                            # 技术 ·
+                        </a>
+                    
+                        <a href="https://owenzjg.netlify.app/tag/3siJ-JNIP/" class="post-tags">
+                            # Gridea建站 ·
+                        </a>
+                    
+                    
+                    <time>2 min read · </time>
+                    <!--阅读时长-->
+                    
+                    <span id="busuanzi_container_page_pv">
+                        阅读量:<span id="busuanzi_value_page_pv"></span>次 ·
+                    </span>
+                </div>
+
+                <!--
+                    头图代码
+                    <img src='https://owenzjg.netlify.app/post-images/grideading-bu-jia-zai-tiao.png'></a>
+                -->
+                
+                <!--
+                所有文章访问总数：
+                <img src='https://www.free-website-hit-counter.com/c.php?d=9&amp;id=143602&amp;s=1' border='0' ></a>
+                -->
+                
+                <blockquote>
+                    <p>为了你看到的是最新博文，请点击下方链接到我的博客owenzjg's blog观看此文</p>
+                    <a href="https://owenzjg.netlify.app/post/grideading-bu-jia-zai-tiao/" title="[Gridea]顶部加载条">https://owenzjg.netlify.app/post/grideading-bu-jia-zai-tiao/</a>
+                    <p>ps:为了观者体验，请转载时保留这段文字。</p>
+                </blockquote>
+                
+                <div class="post-content">
+                    <h1 id="前言">前言</h1>
+<p>      看到luogu的加载条，心里羡慕死了，想给自己也加一个，<s>纯属不健康心里</s></p>
+<h1 id="正文">正文</h1>
+<h2 id="打开相依代码">打开相依代码。</h2>
+<p>      这个应该是最新简单的了，保准每个人都会，首先先看一下目录，为了新手，我来详细介绍一下。<br>
+      首先，点击「gridea」最左下角的设置符号-&gt;「站点源文件目录」照着这个打开就可以了<br>
+      打开站点源文件过后我们再按照一下打开相应文件（最后一个文件打开的时候记事本🗒️什么的都是可以的<br>
+      「themes」-&gt;「你的主题」-&gt;「templates」-&gt;「includes」-&gt;「head.ejs」<br>
+      然后把它放在哪里，<s>这辈子都不用管了</s></p>
+<h2 id="插入代码">插入代码</h2>
+<p>      在刚才打开的文件最上面插入这个</p>
+<pre><code class="language-html">&lt;script src=&quot;//cdn.bootcss.com/pace/1.0.2/pace.min.js&quot;&gt;&lt;/script&gt;
+&lt;link href=&quot;//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css&quot; rel=&quot;stylesheet&quot;&gt;
+</code></pre>
+<p>      如果你不想用粉色的，可以加入这一个</p>
+<pre><code class="language-html">&lt;style&gt;
+    .pace .pace-progress {
+    	background: #1E92FB; /*进度条颜色*/
+    	height: 3px;
+    }
+    .pace .pace-progress-inner {
+     	box-shadow: 0 0 10px #1E92FB, 0 0 5px #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+    	border-top-color: #1E92FB;	/*上边框颜色*/
+    	border-left-color: #1E92FB;	/*左边框颜色*/
+    }
+  &lt;/style&gt;
+</code></pre>
+<p>      这个代码进度条是蓝色的，当然，你也可以自己修改。</p>
+<h2 id="唠叨">唠叨</h2>
+<p>      简单吧，看我推荐的，绝对是<s>连我都能学会</s>的。</p>
+<h1 id="后续">后续</h1>
+<p>·<a href="https://cloud.tencent.com/developer/article/1960734">为Hexo博客添加顶部加载条 - 腾讯云开发者社区-腾讯云</a><br>
+·<a href="https://blog.csdn.net/u011236348/article/details/88146947">Hexo博客NexT主题美化之顶部加载进度条_潘高的博客-CSDN博客</a></p>
+
+                </div>
+                <div class="post-footer">
+	<p>欢迎在留言区讨论发言，我会尽量快速回复</p>
+	<p>本博客经常写系列文章，建议到「专题」中查看同类文章。</p>
+	<!--<h1 id="后续">后续</h1>  -->
+	
+	<blockquote>
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong class="language" data-lan="author">本文作者：owenzjg</strong>
+      
+    </li>
+    <li class="post-copyright-link">
+      <strong class="language" data-lan="link">本文链接：</strong>
+      <a href="https://owenzjg.netlify.app/post/grideading-bu-jia-zai-tiao/" title="[Gridea]顶部加载条">https://owenzjg.netlify.app/post/grideading-bu-jia-zai-tiao/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong class="language" data-lan="copyright">版权声明： </strong>
+      本博客所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i> BY-NC-SA</a> 许可协议。
+    </li>
+    <li class="post-copyright-license">
+      <strong class="language" data-lan="copyright">转载要求： </strong>
+      转载请在文首显眼出表明本文链接且在留言区告知我并附上你转载到哪里的链接。
+    </li>
+  </ul>
+	</blockquote>
+</div>
+
+            </article>
+        </div>
+		<p>注：评论输入框在最下面。若没有评论区请稍等加载。</p>
+		<script src="https://utteranc.es/client.js"
+				repo="owenzjg/owenzjg.github.io"
+				issue-term="title"
+				theme="github-light"
+				crossorigin="anonymous"
+				async>
+		</script>
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://owenzjg.netlify.app/post/grideaping-lun-qu-xi-tong/" class="post-title gt-a-link">
+                    [Gridea]utterances评论区系统
+                </a>
+            </div>
+        
+
+        
+
+        
+
+        
+
+        <script>
+    function secondToDate(second) {
+        if (!second) {
+            return 0;
+        }
+        var time = new Array(0, 0, 0, 0, 0);
+        if (second >= 365 * 24 * 3600) {
+            time[0] = parseInt(second / (365 * 24 * 3600));
+            second %= 365 * 24 * 3600;
+        }
+        if (second >= 24 * 3600) {
+            time[1] = parseInt(second / (24 * 3600));
+            second %= 24 * 3600;
+        }
+        if (second >= 3600) {
+            time[2] = parseInt(second / 3600);
+            second %= 3600;
+        }
+        if (second >= 60) {
+            time[3] = parseInt(second / 60);
+            second %= 60;
+        }
+        if (second > 0) {
+            time[4] = second;
+        }
+        return time;
+    }</script><script type="text/javascript" language="javascript">
+    function setTime() {
+        var create_time = Math.round(new Date(Date.UTC(2023, 00, 09, 10, 32, 0)).getTime() / 1000);
+        var timestamp = Math.round((new Date().getTime() + 8 * 60 * 60 * 1000) / 1000);
+        currentTime = secondToDate((timestamp - create_time));
+        currentTimeHtml = currentTime[0] + '年' + currentTime[1] + '天'
+                + currentTime[2] + '时' + currentTime[3] + '分' + currentTime[4]
+                + '秒';
+        document.getElementById("htmer_time").innerHTML = currentTimeHtml;
+    }    setInterval(setTime, 1000);</script>
+    
+    
+<div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">Always continue; Never break;
+</div>
+    <div class="social-container">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+        </script>
+        <span id="busuanzi_container_site_pv">
+            本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        </span>
+        <br>
+        <span id="busuanzi_container_site_uv">
+            本站访客数为<span id="busuanzi_value_site_uv"></span>人次
+          </span>
+        <br>
+        
+        <!--
+        网站总访问量：<img src='https://www.free-website-hit-counter.com/c.php?d=9&id=143596&s=1'></a>
+        -->
+       网站稳定运行：<span id="htmer_time" style="color: black;"></span>
+         <!--Theme <a href="https://github.com/imhanjie/gridea-theme-pure" target="_blank">Pure</a>,--> 
+        <br>
+        <a href="https://icp.gov.moe/?keyword=20237890" target="_blank">萌ICP备20237890号</a>
+        <br>
+        Powered by <ahref="https://owenzjg.netlify.app/" target="_blank">Owenzjg</a> | 
+        <a href="https://owenzjg.netlify.app/atom.xml" target="_blank">RSS</a> 
+        <!--  <a href="https://www.luogu.com.cn/user/515971">luogu </a>
+&#160and&#160
+<a href="https://space.bilibili.com/2141375851/"> bilibili</a>.
+<br>
+网站总访问量：<img src='https://www.free-website-hit-counter.com/c.php?d=9&id=143596&s=1' border='0' ></a>
+<br>
+网站状态: <img src='https://api.netlify.com/api/v1/badges/33964a3e-8918-45d9-89a4-a5d74cee8f6c/deploy-status' ></a>
+<br>
+<a href="https://icp.gov.moe/?keyword=20237890" target="_blank">萌ICP备20237890号</a> -->
+    </div>
+</div>
+
+<script>
+  hljs.highlightAll()
+</script>
+
+    </div>
+</div>
+</body>
+</html>

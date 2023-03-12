@@ -1,0 +1,378 @@
+<html>
+<head>
+    <!--
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<!--这个是基本代码-->
+<style>
+    .pace .pace-progress {
+    	background: #1E92FB; /*进度条颜色*/
+    	height: 3px;
+    }
+    .pace .pace-progress-inner {
+     	box-shadow: 0 0 10px #1E92FB, 0 0 5px #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+    	border-top-color: #1E92FB;	/*上边框颜色*/
+    	border-left-color: #1E92FB;	/*左边框颜色*/
+    }
+  </style>
+<!--这个是更改颜色的-->
+<!--上面这段代码是为了顶部加载条准备的-->
+<meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>[c++]P8423 [THUPC2022 决赛] 想象 题解 | Owenzjg&#39;s blog</title>
+
+<link rel="shortcut icon" href="https://owenzjg.netlify.app/favicon.ico?v=1678601024968">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://owenzjg.netlify.app/styles/main.css">
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css"> -->
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/9.12.0/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/9.12.0/languages//dart.min.js"></script>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script> -->
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+    
+</head>
+<body>
+
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="/">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            Owenzjg&#39;s blog
+        </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="changeNavbar">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+            <div class="nav-item">
+                
+                <a href="/" class="menu gt-a-link">
+                    首页
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/tag/rHfLoJkSS/" class="menu gt-a-link">
+                    专题
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/archives" class="menu gt-a-link">
+                    归档
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/tags" class="menu gt-a-link">
+                    标签
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/post/about" class="menu gt-a-link">
+                    关于
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/friends" class="menu gt-a-link">
+                    友链
+                </a>
+                
+            </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1678601024968"
+                action="/search/">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+<script>
+    /* 移动端导航栏展开/收起切换 */
+    document.getElementById('changeNavbar').onclick = () => {
+        var element = document.getElementById('navbarSupportedContent');
+        if (element.style.display === 'none' || element.style.display === '') {
+            element.style.display = 'block';
+        } else {
+            element.style.display = 'none';
+        }
+    }
+</script>
+<script>
+/* 百度统计 */
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?d1b0e8fbeee11aa2f032dccdf777a613";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+			
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    [c++]P8423 [THUPC2022 决赛] 想象 题解
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2023-03-10 ·
+                    </time>
+                    
+                        <a href="https://owenzjg.netlify.app/tag/JUaDEFBel/" class="post-tags">
+                            # luogu ·
+                        </a>
+                    
+                        <a href="https://owenzjg.netlify.app/tag/4CQi8I8dO/" class="post-tags">
+                            # c++ ·
+                        </a>
+                    
+                    
+                    <time>3 min read · </time>
+                    <!--阅读时长-->
+                    
+                    <span id="busuanzi_container_page_pv">
+                        阅读量:<span id="busuanzi_value_page_pv"></span>次 ·
+                    </span>
+                </div>
+
+                <!--
+                    头图代码
+                    <img src=''></a>
+                -->
+                
+                <!--
+                所有文章访问总数：
+                <img src='https://www.free-website-hit-counter.com/c.php?d=9&amp;id=143602&amp;s=1' border='0' ></a>
+                -->
+                
+                <blockquote>
+                    <p>为了你看到的是最新博文，请点击下方链接到我的博客owenzjg's blog观看此文</p>
+                    <a href="https://owenzjg.netlify.app/post/cp8423-thupc2022-jue-sai-xiang-xiang-ti-jie/" title="[c++]P8423 [THUPC2022 决赛] 想象 题解">https://owenzjg.netlify.app/post/cp8423-thupc2022-jue-sai-xiang-xiang-ti-jie/</a>
+                    <p>ps:为了观者体验，请转载时保留这段文字。</p>
+                </blockquote>
+                
+                <div class="post-content">
+                    <h1 id="分析">分析</h1>
+<p>这个…………还是一个<strong>暂无评定</strong>的题目，我的天，看到题目我人都麻了。</p>
+<p>其实这个怎么说呢，关键就是这两句话“特别是出生在风井省内”“例：真卷省的省级选拔赛，缩写名称为 ZJOI。”</p>
+<p>分析<code>ZJOI</code>,oi联想到信息学，而zj对应真卷</p>
+<p>所以，风井省就是fj</p>
+<p>综上合并一下，就是<code>FJOI</code></p>
+<p>这个题目，无语了。</p>
+<h1 id="代码">代码</h1>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int main()
+{
+    cout&lt;&lt;&quot;FJOI&quot;;
+	return 0;
+}
+</code></pre>
+<h1 id="题目">题目</h1>
+<h2 id="题目描述">题目描述</h2>
+<p>长颈鹿是一名想象学竞赛（Olympiad in Imaginics） 的选手。特别是出生在风井省内，若要从千百高手中脱颖而出，争夺进入全国决赛的门票，为自己上大学取得升学优势，更需要无穷无尽的想象力。</p>
+<p>风井省的赛题风格自古便与其他省份截然不同，因此即便在 3022 年，风井省也保持着自己的独立作风，没有与其他省一同进行统考，仍是独立命卷。</p>
+<p>长颈鹿深知风井省赛题所需的想象力之深厚：在往年，赛题的空间限制、数据组数甚至是题目大意，都可能需要选手自行想象。有些一眼看就没有多项式做法的题目，只要加以想象，也可以通过简单的输出通过。而真正的博弈，往往在赛前就开始，风井省总是会从网络各地原汁原味搬运题目，对于没有在赛前就做到原题的选手，想象力的匮乏是不可避免的。</p>
+<p>但想象学竞赛的魅力就在于，你永远想象不到会发生的事。</p>
+<p>在风井省选前半个月，长颈鹿的教练便为学生们布置了两道在 CodeFancy 上非常冷门的练习题目，但没让长颈鹿想到的是，这竟与正式赛题完全一致！长颈鹿十分钦佩教练的想象力，更深刻理解了“做干净的奥赛”为何意。最终，在这次风井省选中，长颈鹿的学校名列前茅，即便代价是另一些有一定水平的选手没有得到理想的名次。</p>
+<p>黑盒测试，是想象学竞赛区别于别的竞赛的最大特点。排除了人为的评判，将所有程序一视同仁，因此在以前，想象学竞赛被称为“最公平的竞赛”。可在冰冷冷的现实面前，所谓公平的表象，也只是一种想象。</p>
+<p>幸好，发生过的事情无需想象，我们都还能用双眼直视真相，理解发生了什么，并将之铭记。就像你也无需对本文描述的故事进行想象，简单的换词游戏不会屏蔽真义。现在就请你输出，长颈鹿在风井省参与的比赛的是什么？用缩写名称输出。</p>
+<p>例：真卷省的省级选拔赛，缩写名称为 ZJOI。</p>
+<h2 id="输入格式">输入格式</h2>
+<p>本题的输入对于你的输出没有意义，你可以无需读入。</p>
+<h2 id="输出格式">输出格式</h2>
+<p>本题仅有一个唯一的输出答案。</p>
+<p>输出一行，四个大写字母，表示风井省的省级选拔赛缩写名称。</p>
+<h2 id="提示">提示</h2>
+<p>请不要妄加想象，认真阅读题目要求，正确输出，以避免在本题出错罚时。</p>
+
+                </div>
+                <div class="post-footer">
+	<p>欢迎在留言区讨论发言，我会尽量快速回复</p>
+	<p>本博客经常写系列文章，建议到「专题」中查看同类文章。</p>
+	<!--<h1 id="后续">后续</h1>  -->
+	
+	<blockquote>
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong class="language" data-lan="author">本文作者：owenzjg</strong>
+      
+    </li>
+    <li class="post-copyright-link">
+      <strong class="language" data-lan="link">本文链接：</strong>
+      <a href="https://owenzjg.netlify.app/post/cp8423-thupc2022-jue-sai-xiang-xiang-ti-jie/" title="[c++]P8423 [THUPC2022 决赛] 想象 题解">https://owenzjg.netlify.app/post/cp8423-thupc2022-jue-sai-xiang-xiang-ti-jie/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong class="language" data-lan="copyright">版权声明： </strong>
+      本博客所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i> BY-NC-SA</a> 许可协议。
+    </li>
+    <li class="post-copyright-license">
+      <strong class="language" data-lan="copyright">转载要求： </strong>
+      转载请在文首显眼出表明本文链接且在留言区告知我并附上你转载到哪里的链接。
+    </li>
+  </ul>
+	</blockquote>
+</div>
+
+            </article>
+        </div>
+		<p>注：评论输入框在最下面。若没有评论区请稍等加载。</p>
+		<script src="https://utteranc.es/client.js"
+				repo="owenzjg/owenzjg.github.io"
+				issue-term="title"
+				theme="github-light"
+				crossorigin="anonymous"
+				async>
+		</script>
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://owenzjg.netlify.app/post/gong-ju-html-zhuan-huan-markdown/" class="post-title gt-a-link">
+                    [工具]html转换markdown
+                </a>
+            </div>
+        
+
+        
+
+        
+
+        
+
+        <script>
+    function secondToDate(second) {
+        if (!second) {
+            return 0;
+        }
+        var time = new Array(0, 0, 0, 0, 0);
+        if (second >= 365 * 24 * 3600) {
+            time[0] = parseInt(second / (365 * 24 * 3600));
+            second %= 365 * 24 * 3600;
+        }
+        if (second >= 24 * 3600) {
+            time[1] = parseInt(second / (24 * 3600));
+            second %= 24 * 3600;
+        }
+        if (second >= 3600) {
+            time[2] = parseInt(second / 3600);
+            second %= 3600;
+        }
+        if (second >= 60) {
+            time[3] = parseInt(second / 60);
+            second %= 60;
+        }
+        if (second > 0) {
+            time[4] = second;
+        }
+        return time;
+    }</script><script type="text/javascript" language="javascript">
+    function setTime() {
+        var create_time = Math.round(new Date(Date.UTC(2023, 00, 09, 10, 32, 0)).getTime() / 1000);
+        var timestamp = Math.round((new Date().getTime() + 8 * 60 * 60 * 1000) / 1000);
+        currentTime = secondToDate((timestamp - create_time));
+        currentTimeHtml = currentTime[0] + '年' + currentTime[1] + '天'
+                + currentTime[2] + '时' + currentTime[3] + '分' + currentTime[4]
+                + '秒';
+        document.getElementById("htmer_time").innerHTML = currentTimeHtml;
+    }    setInterval(setTime, 1000);</script>
+    
+    
+<div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">Always continue; Never break;
+</div>
+    <div class="social-container">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+        </script>
+        <span id="busuanzi_container_site_pv">
+            本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        </span>
+        <br>
+        <span id="busuanzi_container_site_uv">
+            本站访客数为<span id="busuanzi_value_site_uv"></span>人次
+          </span>
+        <br>
+        
+        <!--
+        网站总访问量：<img src='https://www.free-website-hit-counter.com/c.php?d=9&id=143596&s=1'></a>
+        -->
+       网站稳定运行：<span id="htmer_time" style="color: black;"></span>
+         <!--Theme <a href="https://github.com/imhanjie/gridea-theme-pure" target="_blank">Pure</a>,--> 
+        <br>
+        <a href="https://icp.gov.moe/?keyword=20237890" target="_blank">萌ICP备20237890号</a>
+        <br>
+        Powered by <ahref="https://owenzjg.netlify.app/" target="_blank">Owenzjg</a> | 
+        <a href="https://owenzjg.netlify.app/atom.xml" target="_blank">RSS</a> 
+        <!--  <a href="https://www.luogu.com.cn/user/515971">luogu </a>
+&#160and&#160
+<a href="https://space.bilibili.com/2141375851/"> bilibili</a>.
+<br>
+网站总访问量：<img src='https://www.free-website-hit-counter.com/c.php?d=9&id=143596&s=1' border='0' ></a>
+<br>
+网站状态: <img src='https://api.netlify.com/api/v1/badges/33964a3e-8918-45d9-89a4-a5d74cee8f6c/deploy-status' ></a>
+<br>
+<a href="https://icp.gov.moe/?keyword=20237890" target="_blank">萌ICP备20237890号</a> -->
+    </div>
+</div>
+
+<script>
+  hljs.highlightAll()
+</script>
+
+    </div>
+</div>
+</body>
+</html>

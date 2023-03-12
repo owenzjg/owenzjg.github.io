@@ -1,0 +1,407 @@
+<html>
+<head>
+    <!--
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<!--这个是基本代码-->
+<style>
+    .pace .pace-progress {
+    	background: #1E92FB; /*进度条颜色*/
+    	height: 3px;
+    }
+    .pace .pace-progress-inner {
+     	box-shadow: 0 0 10px #1E92FB, 0 0 5px #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+    	border-top-color: #1E92FB;	/*上边框颜色*/
+    	border-left-color: #1E92FB;	/*左边框颜色*/
+    }
+  </style>
+<!--这个是更改颜色的-->
+<!--上面这段代码是为了顶部加载条准备的-->
+<meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Gridea，一个小而美的博客梦想桥梁 | Owenzjg&#39;s blog</title>
+
+<link rel="shortcut icon" href="https://owenzjg.netlify.app/favicon.ico?v=1678601024968">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://owenzjg.netlify.app/styles/main.css">
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css"> -->
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/9.12.0/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/9.12.0/languages//dart.min.js"></script>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script> -->
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+    
+</head>
+<body>
+
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="/">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            Owenzjg&#39;s blog
+        </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="changeNavbar">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+            <div class="nav-item">
+                
+                <a href="/" class="menu gt-a-link">
+                    首页
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/tag/rHfLoJkSS/" class="menu gt-a-link">
+                    专题
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/archives" class="menu gt-a-link">
+                    归档
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/tags" class="menu gt-a-link">
+                    标签
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/post/about" class="menu gt-a-link">
+                    关于
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/friends" class="menu gt-a-link">
+                    友链
+                </a>
+                
+            </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1678601024968"
+                action="/search/">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+<script>
+    /* 移动端导航栏展开/收起切换 */
+    document.getElementById('changeNavbar').onclick = () => {
+        var element = document.getElementById('navbarSupportedContent');
+        if (element.style.display === 'none' || element.style.display === '') {
+            element.style.display = 'block';
+        } else {
+            element.style.display = 'none';
+        }
+    }
+</script>
+<script>
+/* 百度统计 */
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?d1b0e8fbeee11aa2f032dccdf777a613";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+			
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    Gridea，一个小而美的博客梦想桥梁
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2023-01-12 ·
+                    </time>
+                    
+                        <a href="https://owenzjg.netlify.app/tag/zrffiK6Qj/" class="post-tags">
+                            # 技术 ·
+                        </a>
+                    
+                        <a href="https://owenzjg.netlify.app/tag/3siJ-JNIP/" class="post-tags">
+                            # Gridea建站 ·
+                        </a>
+                    
+                    
+                    <time>5 min read · </time>
+                    <!--阅读时长-->
+                    
+                    <span id="busuanzi_container_page_pv">
+                        阅读量:<span id="busuanzi_value_page_pv"></span>次 ·
+                    </span>
+                </div>
+
+                <!--
+                    头图代码
+                    <img src='https://owenzjg.netlify.app/post-images/grideayi-ge-xiao-er-mei-de-jing-tai-bo-ke-bian-ji-qi.png'></a>
+                -->
+                
+                <!--
+                所有文章访问总数：
+                <img src='https://www.free-website-hit-counter.com/c.php?d=9&amp;id=143602&amp;s=1' border='0' ></a>
+                -->
+                
+                <blockquote>
+                    <p>为了你看到的是最新博文，请点击下方链接到我的博客owenzjg's blog观看此文</p>
+                    <a href="https://owenzjg.netlify.app/post/grideayi-ge-xiao-er-mei-de-jing-tai-bo-ke-bian-ji-qi/" title="Gridea，一个小而美的博客梦想桥梁">https://owenzjg.netlify.app/post/grideayi-ge-xiao-er-mei-de-jing-tai-bo-ke-bian-ji-qi/</a>
+                    <p>ps:为了观者体验，请转载时保留这段文字。</p>
+                </blockquote>
+                
+                <div class="post-content">
+                    <p>备注：本文叙述操作过程非常详细，会稍现冗长，可以适当的跳读。</p>
+<h1 id="引子">引子</h1>
+<p>      相信大家应该已经非常了解GitHub pages了，他是一个基于github的免费静态博客平台，可以供大部分对博客感兴趣但是有不想花钱的人使用。GitHub pages的搭建非常简单，可以快速搭建一个简洁而不失优雅的blog，网络上也有大量的教程。但是GitHub pages的管理需要很高的技术含量，需要会使用gite。在<a href="https://link.zhihu.com/?target=https%3A//pages.github.com/">官方文档</a>中，你需要经历繁琐的步骤才可以增删修改文章或版面。那对于那些想更便捷和优雅的操作 Github Pages 人们来说，我郑重向大家推荐这款工具 Gridea 。</p>
+<hr>
+<h1 id="介绍">介绍</h1>
+<p>      这里先给大家整体感知一下gridea的效果和后台，如果你觉的还不错的话，可以接着往下看，安装的过程非常简单，就是看你需不喜欢。<br>
+      首先，说明一下，gridea的首页有博客网页的展示，我这里选用的是pure主题，如果想看效果就<a href="https://gridea.dev/themes">直接到官方链接看一下</a>,点击每一个图片旁边的小眼睛就可以啦！<br>
+      那我们就直接上后台的图片啦！<br>
+<img src="https://owenzjg.netlify.app/post-images/1673432229257.png" alt="" loading="lazy"><br>
+<img src="https://owenzjg.netlify.app/post-images/1673432254949.png" alt="" loading="lazy"><br>
+      其实还是非常方便的啦！让我们开始吧👊</p>
+<hr>
+<h1 id="安装和注册">安装和注册</h1>
+<p>      首先，我们需要一个<a href="https://github.com/">GitHub</a>账号。国内的GitHub访问有可能会有一点慢，可以尝试中午、早晨这样的人少的时间段访问，或者耐心等待！<br>
+      打开<a href="https://github.com/">GitHub官网</a>后，点击右上角的sign in，就会自动跳转到注册页面，根据提示输入邮箱，密码和用户名。是否接受公告随个人喜好回答即可。最后完成人机验证，<s>我笨到没看懂什么意思</s> 。然后在你邮箱中输入验证吗即可，<s>我瞎输入的邮箱怎么办</s>。<br>
+      好了，你的GitHub账号准备完了！<br>
+      随后安装Gridea。Gridea的安装非常简单，到<a href="https://open.gridea.dev/#started">Gridea的官网</a>就可以下载了</p>
+<hr>
+<h1 id="准备github仓库和token">准备GitHub仓库和token</h1>
+<p>      这一步是唯一有一点点技术含量的地方，但是非常简单，<s>我都会</s>。我们先点击图中的位置新建一个仓库，用来存储你的博客源代码。<br>
+<img src="https://owenzjg.netlify.app/post-images/1673494884888.png" alt="" loading="lazy"><br>
+      然后，按照图里面的步骤填写<br>
+<img src="https://owenzjg.netlify.app/post-images/1673506417243.png" alt="" loading="lazy"><br>
+      创建好了之后，我们就来准备token。那什么是GitHub token呢？他其实类似于你的密码，你可以调整这个密码对应的权限。那这个token建议是时效90天，90天后可以按照这个操作过程再次操作，这样更加安全一些。<br>
+      那为了大家能以后都找到这个地址，我不直接给链接，而是告诉大家操作过程。「右上角自己的头像右边的小箭头」→ 「Settings」→ 「Developer settings」<br>
+<img src="https://owenzjg.netlify.app/post-images/1673506430694.png" alt="" loading="lazy"><br>
+再依次选择 「Developer settings」→ 「Personal access tokens」→ 「Generate new token」<br>
+<img src="https://owenzjg.netlify.app/post-images/1673506443402.png" alt="" loading="lazy"><br>
+      名字起一个自己以后可以看懂的，说明这个 token 是用来干什么的。token 的权限我们只选择 Repo，更安全🔐。<br>
+<img src="https://owenzjg.netlify.app/post-images/1673506456272.png" alt="" loading="lazy"><br>
+      申请成功后，网页上会有数字 + 字母的信息，这个就是 Token，我们一定要保存好，关掉网页后就没有了！后面的配置中我们会用到。<br>
+<img src="https://owenzjg.netlify.app/post-images/1673506696639.png" alt="" loading="lazy"></p>
+<blockquote>
+<p>后期当你死活也同步不成功后，你可以考虑一下是否是你的token过期了。<s>别问我怎么知道的，血的教训</s></p>
+</blockquote>
+<hr>
+<h1 id="大功告成">大功告成</h1>
+<p>      回到「Gridea」-&gt;「远程」<br>
+<img src="https://owenzjg.netlify.app/post-images/1673507088889.png" alt="" loading="lazy"><br>
+域名：Github Pages 对应的域名（例如：https://owenzjg.github.io）<br>
+仓库：你的静态文件存放的仓库（例如：http://owenzjg.github.io ）<br>
+分支：你的 Github Pages 对应的分支（例如：master 或 gh-pages）<br>
+用户名：仓库所属用户的用户名（通常就是你的 Github 账号的昵称，例如：owenzjg）<br>
+邮箱：Git 推送时使用的邮箱（通常就是你的 Github 账号的邮箱，例如：**********@qq.com）<br>
+Token: Git 推送时需要的 Token，用来向 Github 提交构建后的文件 这里的 token 就是 第三步 申请的 Github tokens<br>
+CNAME: 可通过这个【可选项】配置你自己的域名<br>
+      填写上面的信息后，点击 「检测远程连接」 按钮（耐心等待），如果提示 「远程连接成功」 那就 ok 啦～<br>
+      点击同步就可以将你的文章同步到GitHub了，预览为本地预览。第一次同步比较慢，国内GitHub有时链接不稳定，同步失败过一会就好了。（前提是「远程连接成功」）<br>
+      到你的用户名.github.io去访问吧！</p>
+<h1 id="美化">美化</h1>
+<blockquote>
+<p>后续为你的博客添加评论、统计等功能，请点击网站上方「专题」查看。</p>
+</blockquote>
+<hr>
+<h1 id="后续">后续</h1>
+<p>本文撰写时参考了以下文献：<br>
+·<a href="https://zhuanlan.zhihu.com/p/64034679">Gridea 一个小而美的静态博客写作客户端 - 知乎</a><br>
+·<a href="https://zhuanlan.zhihu.com/p/385692707">快速上手 Gridea，实现你小小的博客梦想！ - 知乎</a><br>
+·<a href="https://gridea.dev/gridea-start/">🤗 快速上手 | Gridea</a><br>
+·<a href="https://xgmm.me/post/gridea-pei-zhi-gitalk-ping-lun-xi-tong/">Gridea配置Gitalk评论系统 |</a><br>
+·<a href="https://blog.csdn.net/qq_38463737/article/details/120288329">Gridea 配置Gitalk 的异常：Error Bad credentials 和 Error Not Found_集电极的博客-CSDN博客</a><br>
+·<a href="https://blog.csdn.net/qq_45394976/article/details/127678924">Gridea 同步遇到错误_gridea同步失败_lovely days的博客-CSDN博客</a></p>
+
+                </div>
+                <div class="post-footer">
+	<p>欢迎在留言区讨论发言，我会尽量快速回复</p>
+	<p>本博客经常写系列文章，建议到「专题」中查看同类文章。</p>
+	<!--<h1 id="后续">后续</h1>  -->
+	
+	<blockquote>
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong class="language" data-lan="author">本文作者：owenzjg</strong>
+      
+    </li>
+    <li class="post-copyright-link">
+      <strong class="language" data-lan="link">本文链接：</strong>
+      <a href="https://owenzjg.netlify.app/post/grideayi-ge-xiao-er-mei-de-jing-tai-bo-ke-bian-ji-qi/" title="Gridea，一个小而美的博客梦想桥梁">https://owenzjg.netlify.app/post/grideayi-ge-xiao-er-mei-de-jing-tai-bo-ke-bian-ji-qi/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong class="language" data-lan="copyright">版权声明： </strong>
+      本博客所有文章除特别声明外，均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i> BY-NC-SA</a> 许可协议。
+    </li>
+    <li class="post-copyright-license">
+      <strong class="language" data-lan="copyright">转载要求： </strong>
+      转载请在文首显眼出表明本文链接且在留言区告知我并附上你转载到哪里的链接。
+    </li>
+  </ul>
+	</blockquote>
+</div>
+
+            </article>
+        </div>
+		<p>注：评论输入框在最下面。若没有评论区请稍等加载。</p>
+		<script src="https://utteranc.es/client.js"
+				repo="owenzjg/owenzjg.github.io"
+				issue-term="title"
+				theme="github-light"
+				crossorigin="anonymous"
+				async>
+		</script>
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://owenzjg.netlify.app/post/luogu-qia-pian-sheng-cheng-fang-fa/" class="post-title gt-a-link">
+                    luogu卡片生成方法
+                </a>
+            </div>
+        
+
+        
+
+        
+
+        
+
+        <script>
+    function secondToDate(second) {
+        if (!second) {
+            return 0;
+        }
+        var time = new Array(0, 0, 0, 0, 0);
+        if (second >= 365 * 24 * 3600) {
+            time[0] = parseInt(second / (365 * 24 * 3600));
+            second %= 365 * 24 * 3600;
+        }
+        if (second >= 24 * 3600) {
+            time[1] = parseInt(second / (24 * 3600));
+            second %= 24 * 3600;
+        }
+        if (second >= 3600) {
+            time[2] = parseInt(second / 3600);
+            second %= 3600;
+        }
+        if (second >= 60) {
+            time[3] = parseInt(second / 60);
+            second %= 60;
+        }
+        if (second > 0) {
+            time[4] = second;
+        }
+        return time;
+    }</script><script type="text/javascript" language="javascript">
+    function setTime() {
+        var create_time = Math.round(new Date(Date.UTC(2023, 00, 09, 10, 32, 0)).getTime() / 1000);
+        var timestamp = Math.round((new Date().getTime() + 8 * 60 * 60 * 1000) / 1000);
+        currentTime = secondToDate((timestamp - create_time));
+        currentTimeHtml = currentTime[0] + '年' + currentTime[1] + '天'
+                + currentTime[2] + '时' + currentTime[3] + '分' + currentTime[4]
+                + '秒';
+        document.getElementById("htmer_time").innerHTML = currentTimeHtml;
+    }    setInterval(setTime, 1000);</script>
+    
+    
+<div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">Always continue; Never break;
+</div>
+    <div class="social-container">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+        </script>
+        <span id="busuanzi_container_site_pv">
+            本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        </span>
+        <br>
+        <span id="busuanzi_container_site_uv">
+            本站访客数为<span id="busuanzi_value_site_uv"></span>人次
+          </span>
+        <br>
+        
+        <!--
+        网站总访问量：<img src='https://www.free-website-hit-counter.com/c.php?d=9&id=143596&s=1'></a>
+        -->
+       网站稳定运行：<span id="htmer_time" style="color: black;"></span>
+         <!--Theme <a href="https://github.com/imhanjie/gridea-theme-pure" target="_blank">Pure</a>,--> 
+        <br>
+        <a href="https://icp.gov.moe/?keyword=20237890" target="_blank">萌ICP备20237890号</a>
+        <br>
+        Powered by <ahref="https://owenzjg.netlify.app/" target="_blank">Owenzjg</a> | 
+        <a href="https://owenzjg.netlify.app/atom.xml" target="_blank">RSS</a> 
+        <!--  <a href="https://www.luogu.com.cn/user/515971">luogu </a>
+&#160and&#160
+<a href="https://space.bilibili.com/2141375851/"> bilibili</a>.
+<br>
+网站总访问量：<img src='https://www.free-website-hit-counter.com/c.php?d=9&id=143596&s=1' border='0' ></a>
+<br>
+网站状态: <img src='https://api.netlify.com/api/v1/badges/33964a3e-8918-45d9-89a4-a5d74cee8f6c/deploy-status' ></a>
+<br>
+<a href="https://icp.gov.moe/?keyword=20237890" target="_blank">萌ICP备20237890号</a> -->
+    </div>
+</div>
+
+<script>
+  hljs.highlightAll()
+</script>
+
+    </div>
+</div>
+</body>
+</html>
